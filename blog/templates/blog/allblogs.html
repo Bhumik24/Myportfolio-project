@@ -39,43 +39,20 @@
       </div>
     </nav>
 </header>
-
-<main role="main">
-
-  <section class="jumbotron text-center">
-    <div class="container">
-      <h1>Hi! I'm Bhumik.</h1>
-      <p class="lead text-muted">Hey My name is Bhumik. I am learning django and it is very intresting.</p>
-      <p>
-        <a href="mailto:bhumikpatel248@gmail.com?subject=From Portfolio Website" class="btn btn-primary my-2">Email Me</a>
-      </p>
-    </div>
-  </section>
+<div class = " container text-center p-3">
+<h1> Welcome to the Bhumik Patel's Blog</h1>
+<br> </br>
+</div>
+<div class = " container text-left">
+<h2> Latest Blogs </h2>
+</div>
 
 
-  <div class="album py-5 bg-light">
-    <div class="container">
 
-      <div class="row">
-        {% for job in jobs.all %}
-        <div class="col-md-4">
-          <div class="card mb-4 box-shadow">
-            <img class="card-img-top" src = "{{ job.image.url }}" />
-            <div class="card-body">
-              <p class="card-text">{{job.summary}}</p>
-              </div>
-            </div>
-          </div>
-          {% endfor %}
-        </div>
-      </div>
-    </div>
 
-</main>
 
 <footer class="text-muted">
   <div class="container text-center">
-    <p class="float-right">
     <a> &copy; Bhumik Patel {% now "Y" %}
       </a>
 </footer>
