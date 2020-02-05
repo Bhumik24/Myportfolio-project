@@ -9,9 +9,9 @@
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.6">
 
-    <title>Bhumik Patel's Blog</title>
+    <title>{{blog.title}}</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/album/">
+
 
     <!-- Bootstrap core CSS -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -40,20 +40,19 @@
       </div>
     </nav>
 </header>
-  <div class = "container">
-    <h1 class=" container text-center p-3"> Welcome to the Bhumik Patel's Blog</h1>
+  <div class = "container text-center">
     <br> </br>
-    <h2> Latest Blogs </h2>
     <hr/>
-    {% for blog in blogs.all %}
-
-    <a href = "{%url 'detail' blog.id %} "><h3> {{blog.title}} </h3></a>
+    <h3> {{blog.title}} </h3>
     {{ blog.pub_date_pretty }}
     <br />
-    <img class="img-fluid" src = "{{blog.image.url}}" height = 200 width = 200 >
+    <img class="img-fluid" src = "{{blog.image.url}}" >
     <br />
-    {{ blog.summary }}
-    {% endfor %}
+  </div>
+  <br />
+  <div class = "container text-left">
+  {{ blog.body }}
+
   </div>
 
 

@@ -1,6 +1,8 @@
 
 <!doctype html>
+{% load staticfiles %}
 <html lang="en">
+
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -8,9 +10,7 @@
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.6">
 
-    <title>Album example · Bootstrap</title>
-
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/album/">
+    <title>Bhumik Patel</title>
 
     <!-- Bootstrap core CSS -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -19,7 +19,7 @@
   <body>
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="http://localhost:8000">Bhumik Patel</a>
+      <a class="navbar-brand" href="{% url 'home' %}">Bhumik Patel</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -30,10 +30,10 @@
             <a class="nav-link" href="https://twitter.com/Bhumik24">Twitter</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Resume</a>
+            <a class="nav-link" href="{% static 'BhumikPatel_Resume.pdf' %}">Resume</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Blog</a>
+            <a class="nav-link" href="{% url 'allblogs' %}">Blog</a>
           </li>
         </ul>
       </div>
@@ -49,6 +49,7 @@
       <p>
         <a href="mailto:bhumikpatel248@gmail.com?subject=From Portfolio Website" class="btn btn-primary my-2">Email Me</a>
       </p>
+      <img src="{% static 'IMG_20180326_175658_462.jpg'%} " height =200  width =200 />
     </div>
   </section>
 
