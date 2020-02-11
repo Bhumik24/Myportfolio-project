@@ -10,7 +10,7 @@ class Blog(models.Model):
         return self.publication_date.strftime('%b %d %Y')
 
     def summary(self):
-        return self.body[:50]
+        return self.body[:100]
 
     def __str__(self):
         return self.title
